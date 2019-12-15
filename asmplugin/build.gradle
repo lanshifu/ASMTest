@@ -1,0 +1,38 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    google()
+}
+dependencies {
+    //gradle sdk
+    implementation gradleApi()
+    //groovy sdk
+    implementation localGroovy()
+
+    implementation 'com.android.tools.build:gradle:3.2.1'
+    //ASM相关依赖
+    implementation 'org.ow2.asm:asm:7.1'
+    implementation 'org.ow2.asm:asm-commons:7.1'
+}
+//uploadArchives是将已经自定义好了插件打包到本地Maven库里面去了，
+// 你也可以选择打包到远程服务器中。其中，
+// group和version是我们之后配置插件地址时要用到的。
+group = 'com.lanshifu.asmplugin'
+version = '1.3'
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //本地的Maven地址:当前工程下
+            repository(url: uri('../repo'))
+
+            //提交到远程服务器：
+            // repository(url: "http://www.xxx.com/repos") {
+            //    authentication(userName: "admin", password: "admin")
+            // }
+        }
+    }
+
+}
