@@ -12,13 +12,13 @@ buildscript {
         maven { url "https://plugins.gradle.org/m2/" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath 'com.android.tools.build:gradle:3.2.1'
 
         // traceman插件路径
         classpath "gradle.plugin.cn.cxzheng.methodTracePlugin:tracemanplugin:1.0.3"
 
         //我们写的插件
-        classpath 'com.lanshifu.asmplugin:asmplugin:1.3'
+        classpath 'com.lanshifu.asmplugin:asmplugin:1.4.2'
     }
 }
 

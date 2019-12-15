@@ -38,10 +38,11 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
 
-    debugImplementation 'com.github.zhengcx:MethodTraceMan:1.0.7'
-    releaseImplementation 'com.github.zhengcx:MethodTraceMan:1.0.5-noop'
+//    debugImplementation 'com.github.zhengcx:MethodTraceMan:1.0.7'
+//    releaseImplementation 'com.github.zhengcx:MethodTraceMan:1.0.5-noop'
 
-    compile project(':asmplugin')
+//    implementation project(':asmplugin')  //编译报错了
+    implementation project(':annotations')
 }
 
 

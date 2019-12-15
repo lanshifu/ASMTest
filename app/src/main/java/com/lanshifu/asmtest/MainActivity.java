@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.lanshifu.annotations.MethodLog;
+
 //插桩检测耗时
 //https://github.com/zhengcx/MethodTraceMan/blob/master/README.md
 
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
         testSleep();
     }
 
+    @MethodLog
     private void testSleep() {
         try {
             Thread.sleep(2000);

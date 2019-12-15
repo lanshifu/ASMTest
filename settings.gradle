@@ -1,2 +1,2 @@
-include ':app', ':asmplugin'
+include ':app', ':asmplugin', ':annotations'
 rootProject.name='ASMTest'
